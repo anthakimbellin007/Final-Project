@@ -54,7 +54,29 @@ body {
     bottom: 20px;
     right: 0;            
 }
+.maroon-rectangle-vertical {
+    width: 500px;               /* width of vertical rectangle */
+    height: 100px;              /* full viewport height */
+    background-color: #4a0e0e;
+    border-radius: 10px;
+    position: fixed;            /* fixed on the side */
+    top: 2;                     /* start at top */
+    right: 20px;                   /* aligned to right edge */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 10px;
+}
 
+/* Inner flex container */
+.rectangle-flex-vertical {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
 
 
 
