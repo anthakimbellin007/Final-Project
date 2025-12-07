@@ -4,18 +4,24 @@ justify-content: space-around;
 padding: 15px 0;
 background-color: #4a0e0e;
 }
+img {
+    max-width: 100%;   /* image never exceeds the container width */
+    height: auto;      /* keeps original aspect ratio */
+    display: block;    /* removes small gaps below image */
+}
 .maroon-rectangle {
     width: 700px;          
     height: 300px;
     background-color: #4a0e0e; 
-    border-radius: 2px;    
+    border-radius: 2px;   
+    right: 20px 
 }
 
 body {
-    background-color: #f5f0e6; 
+    background-color: #f5f0e6;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Fondamento', cursive;
 }
 
 .flex-maroon {
@@ -25,7 +31,7 @@ body {
     background-color: #4a0e0e; 
     width: 250px;
     height: 150px;
-    border-radius: 10px;
+    border-radius: 8px;
     color: #f5f0e6; 
 }
 
@@ -42,7 +48,7 @@ body {
 .rectangle-img {
     width: 170px;   
     height: auto;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 .maroon-circle {
@@ -52,11 +58,11 @@ body {
     border-radius: 50%;
     position: absolute;
     bottom: 20px;
-    right: 0;            
+    right: 20px;            
 }
 .maroon-rectangle-vertical {
     width: 500px;               /* width of vertical rectangle */
-    height: 100px;              /* full viewport height */
+    height: 200px;              /* full viewport height */
     background-color: #4a0e0e;
     border-radius: 10px;
     position: fixed;            /* fixed on the side */
@@ -69,24 +75,125 @@ body {
     padding: 10px;
 }
 
-/* Inner flex container */
-.rectangle-flex-vertical {
+
+
+.skills-rectangle1{
+    width: 200px;          
+    height: 50px;
+    background-color: #4a0e0e; 
+    border-radius: 5px;   
+    right: 20px 
+}
+.about-rectangle{
+    width: 200px;          
+    height: 50px;
+    background-color: #4a0e0e; 
+    border-radius: 10px;   
+    right: 20px 
+    color: #f5f0e6      
+    
+}
+
+.contact-rectangle{
+    width: 200px;          
+    height: 45px;
+    background-color: #4a0e0e; 
+    border-radius: 5px;   
+    right: 20px 
+
+
+}
+
+.about-flex {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;  /* space between text and image */
+    align-items: center;             /* vertically aligns content */
+    padding: 20px;
+    gap: 20px;                       /* space between text and image */
+}
+.about-text {
+    flex: 1;                         /* text takes available width */
+    color: white;
+    font-size: 18px;
+} 
+.about-img-container {
+    flex: 0 0 auto;                  /* image stays its size */
+} 
+.about-img {
+    width: 400px;                    /* adjust size */
+    height: auto;
+    border-radius: 8px;
+}
+.about-img {
+    width: 350px;        /* default size on desktop */
+    max-width: 100%;     /* prevents overflow */
+    height: auto;        /* keeps proportions */
+    border-radius: 8px;
+} 
+
+
+@media (max-width: 600px) {
+    .about-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-img {
+        width: 120px;
+    }
+}
+
+
+.maroon-rectangle {
+    background-color: #4a0e0e;
+    padding: 25px;
+    width: 700px;
+    margin: 40px auto;
+    border-radius: 8px;
+}
+
+/* FLEXBOX LAYOUT */
+.contact-flex {
+    display: flex;
     align-items: center;
-    text-align: center;
-    width: 100%;
+    gap: 40px;
 }
 
-
-
-
-
-
-
-
-
+/* LEFT SIDE ICON COLUMN */
+.contact-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
+/* SVG ICON SIZE */
+.contact-icon {
+    width: 60px;
+    height: auto;
+}
 
+/* RIGHT SIDE TEXT */
+.contact-text {
+    color: white;
+    font-size: 18px;
+}
 
+.contact-text a {
+    color: #f5f0e6;
+    text-decoration: underline;
+}
+
+/* MOBILE FRIENDLY */
+@media (max-width: 600px) {
+    .contact-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+    .contact-icons {
+        flex-direction: row;
+        gap: 20px;
+    }
+    .contact-icon {
+        width: 45px;
+    }
+}

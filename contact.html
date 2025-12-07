@@ -13,6 +13,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Anthony Bellinger</title>
 <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Fondamento&display=swap" rel="stylesheet">
+
 </head>
 <body>
 <nav>
@@ -23,11 +25,42 @@
 <li><a href="contact.html">Contact</a></li>
 </ul>
 </nav>
+<header>
+    <div class = "contact-rectangle"</div>
+    <h1> Contact</h1>
+</header>
+<h2>Contact Me Here! </h2>
 <div class="maroon-rectangle">
-    <div class="rectangle-flex">
-        <!-- Add your contact content here -->
-        <p>Contact information or form goes here</p>
+    <div class="contact-flex">
+
+        <!-- LEFT COLUMN: ICONS -->
+        <div class="contact-icons">
+            <img src="Linkedin.svg" alt="LinkedIn Icon" class="contact-icon">
+        </div>
+
+        <!-- RIGHT COLUMN: CONTACT TEXT -->
+        <div class="contact-text">
+            <p>LinkedIn: 
+                https://www.linkedin.com/in/anthony-bellinger-a48a96357/" 
+                    
+                </a>
+            </p>
+            <p>Email: anthonybellinger19@gmail.com</a></p>
+        </div>
+        
     </div>
 </div>
+<p>Fill this Out!</p>
+<form name="contact-form" netlify>
+         <Label>Name <input type="text" name="name" /></Label>
+         <Label>Email <input type="email" name="email" /></Label>
+        <button type="submit">Submit</button>
+        </form>
+        <label for="Reason for Contact">Reason for Contact</label><br>
+            <select id="Reason" name="Reason"><br>
+                <option value="Saying Howdy">Saying hi</option>
+                <option value="looking to connect">looking for a contractor</option>
+                <option value="interested in interview">interested in interview</option>
+
 </body>
 </html>
