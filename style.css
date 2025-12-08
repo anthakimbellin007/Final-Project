@@ -218,3 +218,50 @@ font-size: 30 px;
 h3 {
     text-align: left;
     padding-left: 20px; 
+
+
+    .maroon-rectangle {
+    background-color: #4a0e0e;
+    padding: 25px;
+    width: 90%;              /* ✔ scales on mobile */
+    max-width: 700px;        /* ✔ keeps desktop size */
+    margin: 40px auto;
+    border-radius: 8px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;   
+}
+
+.maroon-rectangle {
+    background-color: #4a0e0e;
+    padding: 25px;
+    width: 90%;           
+    max-width: 700px;     
+    margin: 40px auto;
+    border-radius: 8px;
+    box-sizing: border-box;  
+.rectangle-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;        
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .rectangle-flex {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .rectangle-img {
+        width: 100%;        
+        height: auto;        
+    }
+}
